@@ -2,7 +2,7 @@ from ting_file_management.abstract_queue import AbstractQueue
 
 
 class Queue(AbstractQueue):
-    def __init__(self):
+    def __init__(selfs):
         """Inicialize sua estrutura aqui"""
 
     def __len__(self):
