@@ -20,8 +20,10 @@ def remove(instance):
     if len(instance) == 0:
         return sys.stdout.write("Não há elementos\n")
     path_file = instance.dequeue()["nome_do_arquivo"]
-    print(f"Arquivo {path_file} removido com sucesso")
+    sys.stdout.write(f"Arquivo {path_file} removido com sucesso\n")
 
 
 def file_metadata(instance, position):
-    """Aqui irá sua implementação"""
+    if len(instance) <= position:
+        return sys.stderr.write("Posição inválida")
+    sys.stdout.write(f"{instance.search(position)}\n")
