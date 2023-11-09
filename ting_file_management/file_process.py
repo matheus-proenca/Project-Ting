@@ -4,16 +4,16 @@ import sys
 
 def process(path_file, instance):
     file = txt_importer(path_file)
-    fileDados = {
+    fileData = {
         "nome_do_arquivo": path_file,
         "qtd_linhas": len(file),
         "linhas_do_arquivo": file,
     }
     for dados in instance._data:
-        if dados["nome_do_arquivo"] == fileDados["nome_do_arquivo"]:
+        if dados["nome_do_arquivo"] == fileData["nome_do_arquivo"]:
             return None
-    instance.enqueue(fileDados)
-    sys.stdout.write(f"{fileDados}\n")
+    instance.enqueue(fileData)
+    sys.stdout.write(f"{fileData}\n")
 
 
 def remove(instance):
